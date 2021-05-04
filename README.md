@@ -2,7 +2,7 @@
 
 ## What is *Gulp Starter*?
 
-Gulp Starter is the twig templating starter pack. It consist of some pre configured gulpjs setting for creating an HTML templates with twig. It was always geting an extra burden of work when I need to start my templating works. So, I planned to create this repo which will consist of all the basic files pre configured. This lets me just clone this repo and start templating 😉.
+[Gulp Starter](https://github.com/sonangrai/gulpstarter) is the twig templating starter pack. It consist of some pre configured gulpjs setting for creating an HTML templates with twig. It was always geting an extra burden of work when I need to start my templating works. So, I planned to create this repo which will consist of all the basic files pre configured. This lets me just clone this repo and start templating 😉.
 
 ## Folder Structure 
 
