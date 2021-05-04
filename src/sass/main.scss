@@ -1,0 +1,48 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "./var/colors";
+@import "./var/fonts";
+@import "./mixins";
+//Importing Layouts
+@import "./layouts/header";
+@import "./layouts/footer";
+
+//Importing Pages
+@import "./page/home";
+
+html,
+body {
+  margin: auto;
+  font-family: Poppins;
+  font-weight: 400;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #707070;
+    border-radius: 4px;
+  }
+}
+main {
+  background-color: var(--white2);
+}
+
+.wrapper {
+  width: 86%;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 0.5em 1.5em;
+}
+
+.float {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+}

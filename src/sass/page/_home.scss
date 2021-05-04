@@ -1,0 +1,343 @@
+section.banner {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/banner-bck.png);
+  background-position: right bottom;
+  background-size: 60% 100%;
+  background-color: var(--light-grey);
+  background-repeat: no-repeat;
+  .banner__row {
+    @include flexer(space-between, center);
+    @include md {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+    .left__banner {
+      @include flexer(flex-start, center);
+      @include md {
+        width: 100%;
+      }
+      .content {
+        h2 {
+          font-weight: $font-semibold;
+          font-size: 2.5em;
+          @include sm {
+            font-size: 1.5em;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: var(--white);
+          background-color: var(--black);
+          margin: 1em 0;
+        }
+      }
+    }
+    .right__banner {
+      @include flexer(flex-start, center);
+      @include md {
+        margin: 2em 0;
+        width: 100%;
+      }
+      img {
+        width: 500px;
+        @include lg {
+          width: 300px;
+        }
+        @include md {
+          margin: auto;
+        }
+      }
+    }
+  }
+  .banner {
+    top: -150px;
+    left: 40%;
+    transform: translateX(-50%);
+    clip-path: polygon(0 0, 44% 0, 51% 100%, 0% 100%);
+  }
+  .banner-flower {
+    height: 20px;
+    width: 20px;
+    bottom: 0;
+    left: calc((100% - 86%) / 2);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+section.infos {
+  position: relative;
+  padding: 3em 0;
+  .info__row {
+    &:last-child {
+      flex-direction: row-reverse;
+      margin-top: 10em;
+      @include md {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    @include flexer(space-between, flex-start);
+    @include md {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .lf {
+      width: 50%;
+      @include md {
+        margin-bottom: 1em;
+        width: 100%;
+      }
+      .image {
+        width: 500px;
+        margin: auto;
+        img {
+          width: 100%;
+        }
+        @include lg {
+          width: 300px;
+        }
+        @include sm {
+          width: 100%;
+        }
+      }
+    }
+    .rt {
+      @include md {
+        width: 100%;
+      }
+      .info {
+        .head {
+          span {
+            font-size: 2.5em;
+            font-weight: $font-semibold;
+            @include sm {
+              font-size: 1.5em;
+            }
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+      }
+    }
+  }
+  .top-fw {
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: calc((100% - 80%) / 2);
+    img {
+      width: 100%;
+    }
+  }
+  .top-circ {
+    top: -150px;
+    left: -150px;
+    clip-path: polygon(0 100%, 100% 100%, 100% 51%, 0 51%);
+    @include lg {
+      width: 140px;
+      height: 140px;
+      top: -70px;
+      left: -70px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .mid-twg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+  }
+  .bot-circ {
+    bottom: 20%;
+    transform: translateY(-20%);
+    left: calc((100% - 96%) / 2);
+    @include lg {
+      width: 140px;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+    @include sm {
+      display: none;
+    }
+  }
+  .bot-fw {
+    bottom: 5%;
+    left: calc((100% - 70%) / 2);
+    width: auto;
+    height: auto;
+    @include md {
+      bottom: 0;
+    }
+  }
+}
+
+section.download {
+  background-color: var(--light-grey);
+  padding: 3em 0;
+  .download__row {
+    @include flexer(space-between, center);
+    flex-wrap: wrap;
+    @include md {
+      justify-content: center;
+    }
+    .lf {
+      width: calc(100% - 560px);
+      @include md {
+        width: 100%;
+      }
+      .down__img {
+        @include md {
+          width: 300px;
+          margin: auto;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .rt {
+      width: 500px;
+      @include md {
+        width: 100%;
+      }
+      .down__inst {
+        @include flexer(space-between, flex-start);
+        flex-direction: column;
+        .top {
+          width: 100%;
+          .head {
+            span {
+              font-size: 2.5em;
+              font-weight: $font-semibold;
+              @include sm {
+                font-size: 1.5em;
+              }
+            }
+          }
+          p {
+            margin: 1em 0;
+          }
+        }
+        .bot {
+          width: 100%;
+          margin-top: 140px;
+          @include md {
+            margin-top: 50px;
+          }
+          .bot__row {
+            @include flexer(space-between, center);
+            @include sm {
+              flex-wrap: wrap;
+            }
+            .download {
+              text-decoration: none;
+              padding: 0.5em 1em;
+              border-radius: 20px;
+              width: 48%;
+              background-color: var(--black);
+              @include flexer(space-between, center);
+              @include sm {
+                width: 100%;
+                margin-top: 1em;
+              }
+              .icon {
+                width: 50px;
+                margin-right: 1em;
+                svg {
+                  width: 40px;
+                  height: 40px;
+                }
+              }
+              .labels {
+                flex-grow: 2;
+                color: var(--white);
+                small {
+                  display: block;
+                  font-size: 0.8em;
+                }
+                strong {
+                  display: block;
+                  font-size: 1.2em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section.quick {
+  padding: 2em 0;
+  .quick__row {
+    @include flexer(space-between, center);
+    @include md {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .lf {
+      width: 28%;
+      @include md {
+        width: auto;
+        margin-bottom: 2em;
+        width: 100%;
+      }
+      .quick__inst {
+        .head {
+          span {
+            font-size: 2.5em;
+            font-weight: $font-semibold;
+            @include sm {
+              font-size: 1.5em;
+            }
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+      }
+    }
+    .rt {
+      width: 58%;
+      @include md {
+        width: 100%;
+      }
+      @include flexer(space-between, center);
+      .qr {
+        width: 140px;
+        span {
+          display: block;
+          text-transform: uppercase;
+          font-weight: $font-semibold;
+          text-align: center;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .to {
+      margin: 0 1em;
+    }
+    .view {
+      width: 300px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
