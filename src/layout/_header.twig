@@ -67,11 +67,17 @@
         <div class="action">
           <ul>
             <li>
-              <a href="#!" data-bs-toggle="modal" data-bs-target="#signupModal"
+              <a
+                href="#!"
+                data-bs-toggle="modal"
+                data-bs-target="#signupModal"
+                data-bs-dismiss="modal"
                 >Sign Up</a
               >
             </li>
-            <li><a href="#!" data-bs-dismiss="modal">Close</a></li>
+            <li>
+              <a href="#!" data-bs-dismiss="modal">Close</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -145,7 +151,7 @@
   </div>
 </div>
 
-<!-- Signuo modal -->
+<!-- Signup modal -->
 <div
   class="modal fade"
   id="signupModal"
@@ -170,7 +176,9 @@
                 >Log In
               </a>
             </li>
-            <li><a href="#!" data-bs-dismiss="modal">Close</a></li>
+            <li>
+              <a href="#!" data-bs-dismiss="modal">Close</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -180,6 +188,14 @@
             <img src="./img/signup-illus.png" alt="" />
           </div>
           <form>
+            <div class="form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Full Name"
+              />
+            </div>
             <div class="form-item">
               <input
                 type="text"
@@ -230,6 +246,13 @@
                 class="form-control"
                 id="email"
                 placeholder="Email (Optional)"
+              />
+            </div>
+            <div class="form-item form-inline">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Access Code"
               />
             </div>
             <div class="form-item form-check">
