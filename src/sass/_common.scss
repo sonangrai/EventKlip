@@ -1,0 +1,131 @@
+//Login Modal
+.modal#loginModal,
+.modal#signupModal {
+  background-color: #ffffff26;
+  .login-modal {
+    margin: 0;
+    max-width: unset;
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+    .contents {
+      width: 60%;
+      padding: 5em;
+      background-image: url(../img/banner-bck.png);
+      background-size: 100% 100%;
+      background-color: transparent;
+      border: 0;
+      .header {
+        @include flexer(space-between, center);
+        .action {
+          ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+              &:first-child {
+                a {
+                  color: var(--primary-color);
+                }
+              }
+              padding-left: 2em;
+              padding-right: 2em;
+              a {
+                text-decoration: none;
+                color: var(--black);
+                font-weight: $font-semibold;
+              }
+              &:last-child {
+                padding-right: 0;
+                border-left: 2px solid var(--black);
+              }
+            }
+          }
+        }
+      }
+      .body {
+        margin: 1em 0;
+        .content {
+          width: 60%;
+          .submit {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Main Btn
+.main-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: $font-semibold;
+}
+
+//FOrms
+form {
+  .form-item {
+    margin-bottom: 1em;
+    position: relative;
+    .iti {
+      width: 100%;
+    }
+    .eye,
+    .eye-signup {
+      position: absolute;
+      right: 0;
+      top: 40%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      svg.hide-eye {
+        display: none;
+      }
+      &.show {
+        svg.hide-eye {
+          display: block;
+        }
+        svg.show-eye {
+          display: none;
+        }
+      }
+    }
+  }
+  .form-check {
+    margin-top: 3em;
+  }
+  .form-control {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid var(--black-50);
+    &:focus {
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+}
+
+//COuntry CODE
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent;
+  padding-right: 30px;
+  &:hover {
+    background-color: transparent;
+  }
+}
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background-color: transparent;
+}
+.iti__flag-container:after {
+  position: absolute;
+  content: "";
+  left: calc(100% - 15px);
+  height: 60%;
+  width: 1px;
+  background-color: var(--black-50);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
