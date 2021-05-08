@@ -15,9 +15,29 @@
       background-size: 100% 100%;
       background-color: transparent;
       border: 0;
+      @include md {
+        width: 100%;
+      }
+      @include sm {
+        padding: 3em;
+      }
       .header {
         @include flexer(space-between, center);
+        @include xsm {
+          flex-wrap: wrap;
+        }
+        .label {
+          @include xsm {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1em;
+          }
+        }
         .action {
+          @include xsm {
+            width: 100%;
+            text-align: center;
+          }
           ul {
             display: flex;
             padding: 0;
@@ -48,6 +68,18 @@
         margin: 1em 0;
         .content {
           width: 60%;
+          @include md {
+            width: 80%;
+            margin: auto;
+            .illustration {
+              img {
+                width: 100%;
+              }
+            }
+          }
+          @include sm {
+            width: 100%;
+          }
           .submit {
             text-align: right;
           }

@@ -25,6 +25,9 @@ header {
         img {
           width: 100%;
         }
+        @include xsm {
+          width: 100px;
+        }
       }
     }
     .right__head {
@@ -72,7 +75,16 @@ header {
       .mob-nav {
         display: none;
         @include lg {
-          display: block;
+          display: flex;
+          align-items: center;
+        }
+        .log-mob {
+          margin-right: 1em;
+          a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: $font-semibold;
+          }
         }
         .nav-icon {
           margin: auto;
@@ -92,6 +104,11 @@ header {
             margin-bottom: 0.5em;
             &:last-child {
               margin-bottom: 0;
+            }
+            @include xsm {
+              width: 20px;
+              height: 4px;
+              margin-bottom: 0.2em;
             }
           }
         }
