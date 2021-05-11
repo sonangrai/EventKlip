@@ -4,19 +4,24 @@
     <meta charset="utf-8" />
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/fav.png" type="image/x-icon" />
     <meta name="theme-color" content="#fff" />
     <!-- CSS only -->
-    <link rel="stylesheet" href="css/intlTelInput.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/intlTelInput.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../css/main.css"
+    />
     {% block stylesheets %}{% endblock %} {# {% block javascripts %}{% endblock
     %} #}
   </head>
   <body>
-    {% include "_header2.twig" %}{% block contents %}{% endblock %}
+    {% include "_header-dashboard.twig" %}{% block contents %}{% endblock %}
 
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
-    <script type="text/javascript" src="./js/intlTelInput.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/intlTelInput.min.js"></script>
+    <script type="text/javascript" src="../js/dashboard.js"></script>
   </body>
 </html>
