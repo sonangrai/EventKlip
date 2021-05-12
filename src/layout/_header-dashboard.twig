@@ -4,21 +4,139 @@
       <a href="./"><img src="../img/logo.png" alt="" /></a>
     </div>
     <div class="user--actions">
+      <!-- Notification Dropdown -->
       <div class="notification">
         <div class="dropdown">
           <button
-            class="dropdown-toggle"
+            class="btn-dropdown"
             type="button"
             id="notify"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <i class="bi bi-bell"></i><sup>5</sup>
+            <i class="bi bi-bell"></i
+            ><span class="sup badge badge-main">5</span>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="notify">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <div
+            class="notify-dropdown dropdown-menu-end dropdown-menu"
+            aria-labelledby="notify"
+          >
+            <div class="notifications">
+              <div class="notif-item">
+                <div class="img">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/06/10/07/27/price-2389232__340.png"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="title">Your Event was successful</div>
+                  <small
+                    ><i class="bi bi-clock"></i> <span>2</span> Min Ago</small
+                  >
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="img">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/06/10/07/27/price-2389232__340.png"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="title">Your Event was successful</div>
+                  <small
+                    ><i class="bi bi-clock"></i> <span>2</span> Min Ago</small
+                  >
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="img">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/06/10/07/27/price-2389232__340.png"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="title">Your Event was successful</div>
+                  <small
+                    ><i class="bi bi-clock"></i> <span>2</span> Min Ago</small
+                  >
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="img">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/06/10/07/27/price-2389232__340.png"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="title">Your Event was successful</div>
+                  <small
+                    ><i class="bi bi-clock"></i> <span>2</span> Min Ago</small
+                  >
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="img">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/06/10/07/27/price-2389232__340.png"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="title">Your Event was successful</div>
+                  <small
+                    ><i class="bi bi-clock"></i> <span>2</span> Min Ago</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="notify-footer">
+              <a href="#!"><i class="bi bi-arrow-right-circle"></i> See All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Dropdown -->
+      <div class="user--drop">
+        <div class="dropdown">
+          <button
+            class="btn-dropdown ek-drop-toggle"
+            type="button"
+            id="user--actions"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083386_1280.jpg"
+              alt=""
+            />
+            <span>Sophie</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <ul
+            class="user-dropdown dropdown-menu-end dropdown-menu"
+            aria-labelledby="user--actions"
+          >
+            <li>
+              <a class="dropdown-item" href="#"
+                ><i class="bi bi-person"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><i class="bi bi-gear"></i> Settings</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><i class="bi bi-box-arrow-right"></i> Logout</a
+              >
+            </li>
           </ul>
         </div>
       </div>

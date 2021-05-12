@@ -1,5 +1,98 @@
 .dashboard--header {
+  padding: 1em 2em;
+  position: sticky;
+  top: 0;
   .header--row {
     @include flexer(space-between, center);
+    .logo {
+      img {
+        max-width: 140px;
+      }
+    }
+    .user--actions {
+      @include flexer(space-between, center);
+      .notification {
+        margin-right: 0.5em;
+        i {
+          font-size: 1.2em;
+        }
+        .notify-dropdown {
+          .notifications {
+            max-height: 300px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            ::-webkit-scrollbar {
+              width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+              background-color: #f4f4f4;
+            }
+            ::-webkit-scrollbar-thumb {
+              background: #707070;
+              border-radius: 4px;
+            }
+            .notif-item {
+              @include flexer(space-between, flex-start);
+              padding: 0.5em;
+              min-width: 240px;
+              .img {
+                width: 50px;
+                img {
+                  width: 100%;
+                }
+              }
+              .info {
+                flex-grow: 2;
+                margin-left: 0.5em;
+                .title {
+                  font-size: 1em;
+                  font-weight: $font-semibold;
+                }
+                small {
+                  font-size: 0.7em;
+                }
+              }
+            }
+          }
+          .notify-footer {
+            text-align: center;
+            padding-top: 0.5em;
+            border-top: 1px solid var(--bs-light);
+            a {
+              color: var(--primary-color);
+              text-decoration: none;
+              font-size: 0.8em;
+              i {
+                font-size: 0.8em;
+              }
+            }
+          }
+        }
+      }
+      .user--drop {
+        button {
+          @include flexer(space-between, center);
+          img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          span {
+            margin: 0 0.5em;
+          }
+        }
+        .user-dropdown {
+          li {
+            transition: 0.3s;
+            &:last-child {
+              a {
+                color: var(--bs-red);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

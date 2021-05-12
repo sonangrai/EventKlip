@@ -1,0 +1,31 @@
+//Dropdown
+.btn-dropdown {
+  border: 0;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+//Badge
+.badge {
+  padding: 0.2em 0.4em;
+}
+
+.badge-main {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+//SUP
+.sup {
+  position: relative;
+  top: -1.4em;
+  left: -0.8em;
+  font-size: 0.6em;
+}
+
+//Box shadow dropdown
+.dropdown-menu {
+  box-shadow: 0 1rem 3rem #0000002d;
+}
