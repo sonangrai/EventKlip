@@ -23,7 +23,8 @@
     %} #}
   </head>
   <body>
-    {% include "_header-dashboard.twig" %}{% block contents %}{% endblock %}
+    {% include "_header-dashboard.twig" %} {% include "_sidebar.twig" %} {%
+    block contents %}{% endblock %}
 
     <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../js/intlTelInput.min.js"></script>

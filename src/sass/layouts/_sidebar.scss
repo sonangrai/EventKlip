@@ -1,0 +1,26 @@
+aside {
+  position: fixed;
+  left: 0;
+  width: 300px;
+  height: calc(100% - 16px);
+  box-shadow: 0 2px 4px #7e8eb11a;
+  .user--info {
+    background-color: var(--primary-color);
+    padding: 2em;
+    img {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: auto;
+      padding: 4px;
+      border: 1px solid var(--white);
+    }
+    .user__name {
+      color: var(--white);
+      text-align: center;
+      display: block;
+      margin: 1em 0;
+    }
+  }
+}
