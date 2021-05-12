@@ -1,0 +1,5 @@
+.dashboard--header {
+  .header--row {
+    @include flexer(space-between, center);
+  }
+}
