@@ -1,7 +1,7 @@
 aside {
   position: fixed;
   left: 0;
-  width: 300px;
+  width: 260px;
   height: calc(100% - 16px);
   box-shadow: 0 2px 4px #7e8eb11a;
   .user--info {
@@ -21,6 +21,75 @@ aside {
       text-align: center;
       display: block;
       margin: 1em 0;
+    }
+  }
+
+  .sidebar--nav {
+    padding: 1em;
+    .menu-item {
+      padding: 0.6em;
+      transition: 0.3s;
+      a {
+        display: block;
+        text-decoration: none;
+        i {
+          font-size: 1em;
+          color: var(--primary-color);
+        }
+        span {
+          font-size: 1em;
+          color: var(--black);
+          margin-left: 14px;
+        }
+      }
+      &.active {
+        background-color: var(--light-grey);
+        a {
+          span {
+            color: var(--primary-color);
+          }
+        }
+      }
+      .accordion-item {
+        border: 0;
+        .accordion-button {
+          padding: 0;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+          &:hover {
+            box-shadow: none;
+          }
+          &:not(.collapsed) {
+            color: var(--black);
+            background-color: var(--white);
+            box-shadow: none;
+          }
+          &:after {
+            background-size: 1em;
+            height: 1em;
+            width: 1em;
+          }
+          i {
+            color: var(--primary-color);
+          }
+          span {
+            margin-left: 18px;
+          }
+        }
+        .accordion-collapse {
+          .accordion-body {
+            .sub-menu {
+              li {
+                a {
+                  color: var(--black);
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
