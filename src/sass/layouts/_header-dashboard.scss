@@ -8,6 +8,59 @@
   .header--row {
     @include flexer(space-between, center);
     .logo {
+      @include md {
+        @include flexer(flex-start, center);
+      }
+      .mob-nav {
+        display: none;
+        margin-right: 1em;
+        @include md {
+          display: flex;
+          align-items: center;
+        }
+        .nav-icon {
+          margin: auto;
+          transform: rotate(0deg);
+          transition: 0.5s ease-in-out;
+          cursor: pointer;
+          span {
+            width: 30px;
+            display: block;
+            height: 3px;
+            background: var(--black);
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: 0.25s ease-in-out;
+            margin-bottom: 0.4em;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            @include xsm {
+              width: 20px;
+              height: 3px;
+              margin-bottom: 0.2em;
+            }
+          }
+          &.show {
+            span {
+              &:nth-child(1) {
+                transform: rotate(-50deg);
+                width: 26px;
+              }
+              &:nth-child(2) {
+                width: 24px;
+                margin-left: 10px;
+              }
+              &:nth-child(3) {
+                transform: rotate(50deg);
+                width: 26px;
+              }
+            }
+          }
+        }
+      }
       img {
         max-width: 140px;
       }

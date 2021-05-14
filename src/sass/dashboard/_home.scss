@@ -5,4 +5,12 @@
   background-color: #f6f6f6;
   width: calc(100% - 260px);
   min-height: calc(100% - 16px);
+  padding: 1em;
+
+  @include lg {
+    width: calc(100% - 220px);
+  }
+  @include md {
+    width: 100%;
+  }
 }
