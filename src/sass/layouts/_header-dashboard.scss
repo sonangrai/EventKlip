@@ -5,6 +5,9 @@
   background-color: var(--white);
   box-shadow: 0px -4px 6px #000;
   z-index: 2;
+  @include md {
+    padding: 1em;
+  }
   .header--row {
     @include flexer(space-between, center);
     .logo {
@@ -63,12 +66,59 @@
       }
       img {
         max-width: 140px;
+        @include md {
+          max-width: 100px;
+        }
+        @include xsm {
+          display: none;
+        }
       }
     }
     .user--actions {
       @include flexer(space-between, center);
+      @include md {
+        font-size: 0.9em;
+      }
+      .date--box {
+        margin-right: 1em;
+        background-color: var(--primary-light);
+        padding: 6px 8px;
+        border-radius: 8px;
+        @include flexer(space-between, center);
+        @include sm {
+          display: none;
+        }
+        .icon {
+          margin-right: 0.5em;
+        }
+        .date {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 1em;
+          .lf {
+            padding-right: 10px;
+            position: relative;
+            &:after {
+              content: "";
+              position: absolute;
+              height: 60%;
+              width: 1px;
+              background-color: var(--black);
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+            }
+          }
+          .rt {
+            padding-left: 10px;
+          }
+        }
+      }
       .notification {
         margin-right: 0.5em;
+        @include sm {
+          margin-right: 0;
+        }
         i {
           font-size: 1.2em;
         }
@@ -133,6 +183,10 @@
             height: 30px;
             object-fit: cover;
             border-radius: 50%;
+            @include xsm {
+              width: 20px;
+              height: 20px;
+            }
           }
           span {
             margin: 0 0.5em;
