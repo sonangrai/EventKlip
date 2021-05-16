@@ -52,3 +52,10 @@ $xxl: 1400px;
     @content;
   }
 }
+
+@mixin ek-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px #7e8eb11a;
+}

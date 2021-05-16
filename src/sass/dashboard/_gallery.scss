@@ -1,0 +1,45 @@
+.gallery-contents {
+  padding: 1em;
+  @include ek-card;
+  .gallery-tabs {
+    border: 0;
+    li {
+      button {
+        border: 0;
+        border-radius: 4px;
+        &.active {
+          background-color: var(--primary-color);
+          color: var(--white);
+        }
+      }
+    }
+  }
+  .gallery-content {
+    .pack {
+      margin: 1em 0;
+      .date-title {
+        margin-bottom: 1em;
+        h3 {
+          font-size: 1em;
+          font-weight: 400;
+        }
+      }
+      .gal-rows {
+        @include flexer(flex-start, flex-start);
+        gap: 1em;
+        flex-wrap: wrap;
+        .item {
+          width: calc((100% / 4) - 1em);
+          height: 210px;
+          border-radius: 8px;
+          overflow: hidden;
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

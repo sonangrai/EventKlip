@@ -1,0 +1,148 @@
+{% extends '../layout/_layout-dashboard.twig' %} {% block title %} Sam & Sammy
+Wedding - EventKlip Gallery {% endblock %} {% block javascripts %} {% endblock
+%} {% block contents %}
+<main class="dashboard--main">
+  <!-- Event Detail -->
+  <section class="single-content">
+    <div class="topbar">
+      <div class="goback">
+        <a href="./event"><i class="bi bi-chevron-left"></i></a>
+      </div>
+      <div class="main-title">
+        <span>Sam & Sammy Wedding Gallery</span>
+      </div>
+    </div>
+
+    <div class="gallery-contents">
+      <ul class="nav nav-tabs gallery-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="all-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#all"
+            type="button"
+            role="tab"
+            aria-controls="all"
+            aria-selected="true"
+          >
+            All <span class="count">(14)</span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="photos-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#photos"
+            type="button"
+            role="tab"
+            aria-controls="photos"
+            aria-selected="false"
+          >
+            Photos
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="videos-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#videos"
+            type="button"
+            role="tab"
+            aria-controls="videos"
+            aria-selected="false"
+          >
+            Videos
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content gallery-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="all"
+          role="tabpanel"
+          aria-labelledby="all-tab"
+        >
+          <!-- The Group of Gallery Items by Day -->
+          <div class="pack">
+            <div class="date-title">
+              <h3>Sat, April 17</h3>
+            </div>
+            <div class="gal-rows">
+              <div class="item">
+                <img
+                  src="https://cdn.pixabay.com/photo/2015/03/30/12/35/sunset-698501__340.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/04/26/22/31/bride-1355473__340.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="https://cdn.pixabay.com/photo/2017/08/06/20/11/wedding-2595862__340.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="https://cdn.pixabay.com/photo/2017/09/25/09/35/wedding-2784455__340.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/11/22/19/05/couple-1850073__340.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="pack">
+            <div class="date-title">
+              <h3>Sat, April 16</h3>
+            </div>
+            <div class="gal-rows">
+              <div class="item">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/06/29/04/17/wedding-dress-1485984__340.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="item type-video">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/11/18/18/32/wedding-1836315__340.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="photos"
+          role="tabpanel"
+          aria-labelledby="photos-tab"
+        >
+          ...
+        </div>
+        <div
+          class="tab-pane fade"
+          id="videos"
+          role="tabpanel"
+          aria-labelledby="videos-tab"
+        >
+          ...
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
