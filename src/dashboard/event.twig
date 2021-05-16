@@ -2,17 +2,20 @@
 Wedding - EventKlip {% endblock %} {% block javascripts %} {% endblock %} {%
 block contents %}
 <main class="dashboard--main">
-  <!-- Event Detail -->
-  <section class="single-content">
-    <div class="topbar">
-      <div class="goback">
-        <a href="./"><i class="bi bi-chevron-left"></i></a>
-      </div>
-      <div class="main-title">
-        <span>Sam & Sammy Wedding</span>
-      </div>
-    </div>
+  <!-- BreadCrumb -->
+  <div class="topbar">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Sam & Sammy Wedding
+        </li>
+      </ol>
+    </nav>
+  </div>
 
+  <!-- Event Detail -->
+  <section class="contents single-content">
     <div class="event-row">
       <div class="event-info">
         <div class="hero-image">

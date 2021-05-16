@@ -2,17 +2,23 @@
 Wedding - EventKlip Gallery {% endblock %} {% block javascripts %} {% endblock
 %} {% block contents %}
 <main class="dashboard--main">
-  <!-- Event Detail -->
-  <section class="single-content">
-    <div class="topbar">
-      <div class="goback">
-        <a href="./event"><i class="bi bi-chevron-left"></i></a>
-      </div>
-      <div class="main-title">
-        <span>Sam & Sammy Wedding Gallery</span>
-      </div>
-    </div>
+  <!-- BreadCrumb -->
+  <div class="topbar">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
+        <li class="breadcrumb-item">
+          <a href="./event">Sam & Sammy Wedding </a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Sam & Sammy Wedding Gallery
+        </li>
+      </ol>
+    </nav>
+  </div>
 
+  <!-- Event Detail -->
+  <section class="contents single-content">
     <div class="gallery-contents">
       <ul class="nav nav-tabs gallery-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">

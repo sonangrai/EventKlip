@@ -37,10 +37,39 @@
   color: var(--white);
 }
 
+//Contents
+.contents {
+  padding: 1em;
+}
+
 //Card Modify
 .card {
   background-color: var(--primary-light);
   border-radius: 8px;
   border: 0;
   margin-bottom: 1%;
+}
+
+//Breadcrumb
+.topbar {
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  font-size: 1em;
+  ol.breadcrumb {
+    margin: 0;
+    .breadcrumb-item {
+      font-size: 0.9em;
+      a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 0.9em;
+      }
+      &.active {
+        color: var(--light-grey);
+      }
+      &:before {
+        color: var(--white);
+      }
+    }
+  }
 }

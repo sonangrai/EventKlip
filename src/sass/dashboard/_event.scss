@@ -1,15 +1,4 @@
 .single-content {
-  .topbar {
-    @include flexer(flex-start, center);
-    font-size: 1.4em;
-    margin-bottom: 1em;
-    @include md {
-      font-size: 1em;
-    }
-    .goback {
-      margin-right: 1em;
-    }
-  }
   .event-row {
     @include flexer(flex-start, flex-start);
     @include lg {
