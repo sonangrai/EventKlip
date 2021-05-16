@@ -1,0 +1,50 @@
+{% extends '../layout/_layout-dashboard.twig' %} {% block title %} Sam & Sammy
+Wedding - EventKlip {% endblock %} {% block javascripts %} {% endblock %} {%
+block contents %}
+<main class="dashboard--main">
+  <!-- Event Detail -->
+  <section class="single-content">
+    <div class="topbar">
+      <div class="goback">
+        <a href="./dashboard"><i class="bi bi-chevron-left"></i></a>
+      </div>
+      <div class="main-title">
+        <span>Sam & Sammy Wedding</span>
+      </div>
+    </div>
+
+    <div class="event-row">
+      <div class="event-info">
+        <div class="hero-image">
+          <img
+            src="https://cdn.pixabay.com/photo/2016/09/04/07/40/couple-1643452__340.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="the-descriptions">
+          <p>Hello <strong>Username</strong></p>
+          <p>Welcome to Sam’s & Sammy’s Wedding. Enjoy the event.</p>
+          <p>Start clicking pictures and videos of the event.</p>
+
+          <p>Enjoy!</p>
+        </div>
+      </div>
+
+      <div class="event-actions">
+        <div class="title">
+          <h4>Event By</h4>
+        </div>
+        <div class="prev">
+          <img
+            src="https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607__340.jpg"
+            alt=""
+          />
+        </div>
+        <a href="#" class="btn btn-main">Enter</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
