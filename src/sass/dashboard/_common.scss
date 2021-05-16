@@ -29,3 +29,18 @@
 .dropdown-menu {
   box-shadow: 0 1rem 3rem #0000002d;
 }
+
+//Main Button Dash
+.btn-main {
+  background-color: var(--primary-color);
+  font-weight: $font-semibold;
+  color: var(--white);
+}
+
+//Card Modify
+.card {
+  background-color: var(--primary-light);
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 1%;
+}

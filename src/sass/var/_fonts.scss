@@ -10,6 +10,12 @@ Font Family Imports
 
 @font-face {
   font-family: Poppins;
+  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Poppins;
   src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
 }
@@ -17,4 +23,5 @@ Font Family Imports
 /*
     Font Weights
     */
+$font-medium: 500;
 $font-semibold: 700;
