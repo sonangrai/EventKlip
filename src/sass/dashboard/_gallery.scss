@@ -1,15 +1,52 @@
 .gallery-contents {
   padding: 1em;
   @include ek-card;
-  .gallery-tabs {
-    border: 0;
-    li {
-      button {
-        border: 0;
+  .top {
+    @include flexer(space-between, center);
+    @include sm {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+    .gallery-tabs {
+      @include sm {
+        width: 100%;
+        margin-top: 1em;
+      }
+      border: 0;
+      li {
+        button {
+          border: 0;
+          border-radius: 4px;
+          &.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+          }
+        }
+      }
+    }
+    .search-box {
+      @include sm {
+        width: 100%;
+      }
+      .search-bar {
+        background-color: var(--primary-light);
+        display: flex;
+        justify-content: space-between;
         border-radius: 4px;
-        &.active {
+        overflow: hidden;
+        input {
+          border: 0;
+          background-color: transparent;
+          margin: 0.5em;
+          &:focus {
+            outline: none;
+          }
+        }
+        .search-btn {
+          border: 0;
           background-color: var(--primary-color);
           color: var(--white);
+          padding: 0 1em;
         }
       }
     }

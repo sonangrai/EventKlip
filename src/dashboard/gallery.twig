@@ -24,50 +24,61 @@ Wedding - EventKlip Gallery {% endblock %} {% block stylesheets %}
   <!-- Event Detail -->
   <section class="contents single-content">
     <div class="gallery-contents">
-      <ul class="nav nav-tabs gallery-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="all-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#all"
-            type="button"
-            role="tab"
-            aria-controls="all"
-            aria-selected="true"
-          >
-            All <span class="count">(14)</span>
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="photos-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#photos"
-            type="button"
-            role="tab"
-            aria-controls="photos"
-            aria-selected="false"
-          >
-            Photos
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="videos-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#videos"
-            type="button"
-            role="tab"
-            aria-controls="videos"
-            aria-selected="false"
-          >
-            Videos
-          </button>
-        </li>
-      </ul>
+      <div class="top">
+        <ul class="nav nav-tabs gallery-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="all-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#all"
+              type="button"
+              role="tab"
+              aria-controls="all"
+              aria-selected="true"
+            >
+              All <span class="count">(14)</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="photos-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#photos"
+              type="button"
+              role="tab"
+              aria-controls="photos"
+              aria-selected="false"
+            >
+              Photos
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="videos-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#videos"
+              type="button"
+              role="tab"
+              aria-controls="videos"
+              aria-selected="false"
+            >
+              Videos
+            </button>
+          </li>
+        </ul>
+        <!--Search Box-->
+        <div class="search-box">
+          <form action="" class="search-bar">
+            <input type="search" name="search" placeholder="Search" required />
+            <button class="search-btn" type="submit">
+              <span><i class="bi bi-search"></i></span>
+            </button>
+          </form>
+        </div>
+      </div>
       <div class="tab-content gallery-content" id="myTabContent">
         <div
           class="tab-pane fade show active"
@@ -145,7 +156,7 @@ Wedding - EventKlip Gallery {% endblock %} {% block stylesheets %}
                 /></a>
               </div>
               <div class="item type-video">
-                <a href="https://youtu.be/b4iOwqZCmv4">
+                <a href="https://www.youtube.com/watch?v=zB_g4OQXuzE">
                   <img
                     src="https://cdn.pixabay.com/photo/2016/11/18/18/32/wedding-1836315__340.jpg"
                     alt=""
@@ -247,7 +258,7 @@ Wedding - EventKlip Gallery {% endblock %} {% block stylesheets %}
 
             <div class="gal-rows">
               <div class="item type-video">
-                <a href="https://youtu.be/b4iOwqZCmv4">
+                <a href="../sample.mp4">
                   <img
                     src="https://cdn.pixabay.com/photo/2016/11/18/18/32/wedding-1836315__340.jpg"
                     alt=""
@@ -282,6 +293,17 @@ Wedding - EventKlip Gallery {% endblock %} {% block stylesheets %}
         duration: 300,
         easing: "ease-in-out",
       },
+    });
+
+    //For VIdeo
+    $(".gal-rows .item.type-video a").magnificPopup({
+      disableOn: 700,
+      type: "iframe",
+      mainClass: "mfp-fade",
+      removalDelay: 160,
+      preloader: false,
+
+      fixedContentPos: false,
     });
   });
 </script>
