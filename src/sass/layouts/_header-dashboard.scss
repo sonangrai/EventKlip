@@ -120,6 +120,15 @@
           }
         }
       }
+      .create--event {
+        .date {
+          a {
+            font-size: 1em;
+            color: var(--black);
+            text-decoration: none;
+          }
+        }
+      }
       .notification {
         margin-right: 0.5em;
         @include sm {
