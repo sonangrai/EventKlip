@@ -5,6 +5,7 @@ aside {
   height: calc(100% - 16px);
   box-shadow: 0 2px 4px #7e8eb11a;
   transition: 0.3s ease-out;
+  overflow-y: auto;
   &.show {
     left: 0;
     z-index: 2;

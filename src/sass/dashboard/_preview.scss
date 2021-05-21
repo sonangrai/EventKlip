@@ -15,9 +15,13 @@
         tbody {
           tr {
             td {
-              padding: 0.5em;
+              padding: 0.5em 0;
               &:last-child {
                 font-weight: $font-semibold;
+                padding-left: 1em;
+              }
+              p {
+                margin-bottom: 0;
               }
             }
           }

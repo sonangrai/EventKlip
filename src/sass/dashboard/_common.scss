@@ -36,6 +36,11 @@
   font-weight: $font-semibold;
   color: var(--white);
 }
+.btn-sec {
+  background-color: var(--secondary-color);
+  font-weight: $font-semibold;
+  color: var(--white);
+}
 
 //Contents
 .contents {
@@ -47,7 +52,6 @@
   background-color: var(--primary-light);
   border-radius: 8px;
   border: 0;
-  margin-bottom: 1%;
 }
 
 //Breadcrumb

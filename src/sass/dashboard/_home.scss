@@ -17,19 +17,86 @@
         font-weight: $font-medium;
       }
     }
+    .counters {
+      margin-bottom: 1em;
+      @include md {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          height: 2px;
+        }
+        scrollbar-width: thin;
+      }
+      .count-row {
+        display: flex;
+        gap: 1em;
+        @include md {
+          width: 1024px;
+          overflow-x: auto;
+        }
+        .count-card {
+          width: calc((100% / 5) - 1em);
+          padding: 2em;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--white);
+          flex: 1;
+          .title {
+            h3 {
+              font-size: 1em;
+              text-align: center;
+              font-weight: $font-light;
+            }
+          }
+          .count {
+            padding: 2em 0;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            span {
+              font-size: 2em;
+              font-weight: $font-semibold;
+              color: var(--primary-color);
+              @include lg {
+                font-size: 1.4em;
+              }
+            }
+            &:after {
+              position: absolute;
+              content: "";
+              width: 5em;
+              height: 5em;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background-color: var(--primary-light);
+              transition: 0.3s ease;
+            }
+            &:hover {
+              &:after {
+                width: 6em;
+                height: 6em;
+              }
+            }
+          }
+        }
+      }
+    }
     .events-row {
       @include flexer(flex-start, flex-start);
       flex-wrap: wrap;
-      gap: 1%;
+      gap: 1em;
       .card {
-        width: calc((100% / 3) - 1%);
-        flex-direction: row;
         overflow: hidden;
         @include sm {
           margin-bottom: 1em;
         }
       }
       .the-event {
+        width: calc((100% / 2) - 1em);
+        @include md {
+          width: 100%;
+        }
         flex-direction: column;
         a {
           text-decoration: none;
@@ -39,7 +106,7 @@
           width: 100%;
         }
         .preview-img {
-          height: 140px;
+          height: 200px;
           @include sm {
             height: 240px;
           }

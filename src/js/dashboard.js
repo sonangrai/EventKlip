@@ -41,4 +41,27 @@
   document.querySelector("#week").innerHTML = r;
   document.querySelector("#day").innerHTML = d;
   document.querySelector("#month").innerHTML = m;
+
+  /*
+  For img select
+  */
+  let allInp = document.querySelectorAll("#selectImg");
+  let showCheck = 0;
+  allInp.forEach((a) => {
+    a.addEventListener("click", () => {
+      if (a.checked == true) {
+        a.parentNode.parentNode.classList.add("checked");
+        showCheck++;
+      } else {
+        a.parentNode.parentNode.classList.remove("checked");
+        showCheck--;
+      }
+      //CHecking the showChek
+      if (showCheck > 0) {
+        document.querySelector(".rt .actions").classList.add("show");
+      } else {
+        document.querySelector(".rt .actions").classList.remove("show");
+      }
+    });
+  });
 })();
