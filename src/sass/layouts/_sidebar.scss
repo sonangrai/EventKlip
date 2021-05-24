@@ -6,9 +6,10 @@ aside {
   box-shadow: 0 2px 4px #7e8eb11a;
   transition: 0.3s ease-out;
   overflow-y: auto;
+  background-color: var(--white);
+  z-index: 2;
   &.show {
     left: 0;
-    z-index: 2;
   }
   @include lg {
     width: 220px;

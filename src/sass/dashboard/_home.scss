@@ -42,7 +42,7 @@
           flex: 1;
           .title {
             h3 {
-              font-size: 1em;
+              font-size: 0.9em;
               text-align: center;
               font-weight: $font-light;
             }
@@ -53,7 +53,7 @@
             cursor: pointer;
             text-align: center;
             span {
-              font-size: 2em;
+              font-size: 1.5em;
               font-weight: $font-semibold;
               color: var(--primary-color);
               @include lg {
@@ -84,17 +84,35 @@
     }
     .events-row {
       @include flexer(flex-start, flex-start);
+      margin-right: -1em;
       flex-wrap: wrap;
       gap: 1em;
+      @include sm {
+        margin-right: 0;
+      }
       .card {
         overflow: hidden;
         @include sm {
           margin-bottom: 1em;
         }
       }
+      .the-title {
+        width: calc(100% - 1em);
+        @include flexer(space-between, center);
+        span {
+          font-size: 1.2em;
+          font-weight: $font-semibold;
+        }
+      }
       .the-event {
-        width: calc((100% / 2) - 1em);
-        @include md {
+        width: calc((100% / 4) - 1em);
+        @include xl {
+          width: calc((100% / 3) - 1em);
+        }
+        @include lg {
+          width: calc((100% / 2) - 1em);
+        }
+        @include sm {
           width: 100%;
         }
         flex-direction: column;

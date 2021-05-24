@@ -11,6 +11,8 @@
   .header--row {
     @include flexer(space-between, center);
     .logo {
+      display: flex;
+      align-items: center;
       @include md {
         @include flexer(flex-start, center);
       }
@@ -26,46 +28,15 @@
           transform: rotate(0deg);
           transition: 0.5s ease-in-out;
           cursor: pointer;
-          span {
-            width: 30px;
-            display: block;
-            height: 3px;
-            background: var(--black);
-            border-radius: 9px;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: 0.25s ease-in-out;
-            margin-bottom: 0.4em;
-            &:last-child {
-              margin-bottom: 0;
-            }
-            @include xsm {
-              width: 20px;
-              height: 3px;
-              margin-bottom: 0.2em;
-            }
+          .co {
+            display: none;
           }
           &.show {
-            span {
-              &:nth-child(1) {
-                transform: rotate(-50deg);
-                width: 26px;
-                @include sm {
-                  width: 18px;
-                }
-              }
-              &:nth-child(2) {
-                width: 24px;
-                margin-left: 10px;
-              }
-              &:nth-child(3) {
-                transform: rotate(50deg);
-                width: 26px;
-                @include sm {
-                  width: 18px;
-                }
-              }
+            .co {
+              display: block;
+            }
+            .op {
+              display: none;
             }
           }
         }
@@ -79,14 +50,8 @@
           display: none;
         }
       }
-    }
-    .user--actions {
-      @include flexer(space-between, center);
-      @include md {
-        font-size: 0.9em;
-      }
       .date--box {
-        margin-right: 1em;
+        margin-left: 1em;
         background-color: var(--primary-light);
         padding: 6px 8px;
         border-radius: 8px;
@@ -100,7 +65,7 @@
         .date {
           display: flex;
           flex-wrap: wrap;
-          font-size: 1em;
+          font-size: 0.8em;
           .lf {
             padding-right: 10px;
             position: relative;
@@ -113,17 +78,41 @@
               top: 50%;
               right: 0;
               transform: translateY(-50%);
+              @include md {
+                display: none;
+              }
             }
           }
           .rt {
             padding-left: 10px;
+            @include md {
+              display: none;
+            }
           }
         }
       }
+    }
+    .user--actions {
+      @include flexer(space-between, center);
+      @include md {
+        font-size: 0.9em;
+      }
       .create--event {
+        margin-right: 1em;
+        background-color: var(--primary-light);
+        padding: 6px 8px;
+        border-radius: 8px;
+        @include flexer(space-between, center);
+        @include sm {
+          display: none;
+        }
         .date {
+          margin-left: 0.5em;
+          @include md {
+            display: none;
+          }
           a {
-            font-size: 1em;
+            font-size: 0.8em;
             color: var(--black);
             text-decoration: none;
           }
@@ -205,6 +194,7 @@
           }
           span {
             margin: 0 0.5em;
+            font-size: 0.8em;
           }
         }
         .user-dropdown {
