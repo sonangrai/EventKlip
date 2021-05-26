@@ -22,6 +22,88 @@
           object-fit: cover;
         }
       }
+
+      .event-meta {
+        margin: 1em;
+        padding: 2em;
+        border-radius: 8px;
+        background-color: var(--primary-light);
+        color: var(--light-text);
+        .topper {
+          padding: 1em;
+          border: 1px dotted var(--secondary-color);
+          border-radius: 8px;
+          @include flexer(space-between, center);
+          @include sm {
+            flex-wrap: wrap;
+          }
+          .code {
+            @include sm {
+              width: 100%;
+              margin-bottom: 1em;
+            }
+            span {
+              &:first-child {
+                margin-right: 2em;
+              }
+            }
+            span.the-code {
+              font-weight: $font-semibold;
+            }
+          }
+          .the-code {
+            @include sm {
+              width: 100%;
+              text-align: center;
+            }
+            input {
+              padding: 0;
+              background: transparent;
+              border: 0;
+              &:focus {
+                outline: 0;
+              }
+            }
+          }
+          .copy-code {
+            span {
+              cursor: pointer;
+            }
+          }
+        }
+        .lower {
+          margin-top: 2em;
+          .title {
+            h3 {
+              font-size: 1em;
+            }
+          }
+          .actions {
+            @include flexer(space-between, flex-end);
+            @include sm {
+              flex-wrap: wrap;
+            }
+            .qr {
+              @include sm {
+                width: 100%;
+                margin-bottom: 1em;
+                text-align: center;
+              }
+            }
+            .download {
+              span {
+                a {
+                  color: var(--light-text);
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+        .info {
+          margin-top: 2em;
+        }
+      }
       .the-descriptions {
         margin: 2em;
       }

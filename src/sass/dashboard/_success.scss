@@ -2,7 +2,7 @@
   margin: 1em;
   @include flexer(flex-start, flex-start);
   flex-wrap: wrap;
-  grid-template: 1em;
+  gap: 1em;
   .card {
     width: calc((100% / 2) - 1em);
   }
@@ -10,7 +10,9 @@
     flex-direction: row;
     padding: 1em;
     justify-content: center;
-    width: 100%;
+    @include lg {
+      width: 100%;
+    }
     @include sm {
       flex-wrap: wrap;
     }
@@ -82,11 +84,11 @@
       }
       .actions {
         @include flexer(space-between, flex-end);
-        @include xsm {
+        @include sm {
           flex-wrap: wrap;
         }
         .qr {
-          @include xsm {
+          @include sm {
             width: 100%;
             margin-bottom: 1em;
             text-align: center;
