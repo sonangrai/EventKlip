@@ -82,93 +82,92 @@
         }
       }
     }
-    .events-row {
-      @include flexer(flex-start, flex-start);
-      margin-right: -1em;
-      flex-wrap: wrap;
-      gap: 1em;
-      @include sm {
-        margin-right: 0;
+    .the-title {
+      width: calc(100% - 1em);
+      margin: 1em 0;
+      @include flexer(space-between, center);
+      span {
+        font-size: 1.2em;
+        font-weight: $font-semibold;
       }
-      .card {
-        overflow: hidden;
-        @include sm {
-          margin-bottom: 1em;
-        }
+    }
+    .events {
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        height: 4px;
       }
-      .the-title {
-        width: calc(100% - 1em);
-        @include flexer(space-between, center);
-        span {
-          font-size: 1.2em;
-          font-weight: $font-semibold;
-        }
-      }
-      .the-event {
-        width: calc((100% / 4) - 1em);
-        @include xl {
-          width: calc((100% / 3) - 1em);
-        }
-        @include lg {
-          width: calc((100% / 2) - 1em);
-        }
-        @include sm {
-          width: 100%;
-        }
-        flex-direction: column;
-        a {
-          text-decoration: none;
-          color: var(--black);
-        }
-        @include sm {
-          width: 100%;
-        }
-        .preview-img {
-          height: 200px;
+      scrollbar-width: thin;
+      .events-row {
+        display: flex;
+        width: calc((400px * 6) - 0.2em);
+        gap: 0.2em;
+        .card {
+          overflow: hidden;
           @include sm {
-            height: 240px;
+            margin-bottom: 1em;
           }
-          img {
-            height: 100%;
+        }
+        .the-event {
+          display: inline-block;
+          width: 400px;
+          margin-right: 0.5em;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            text-decoration: none;
+            color: var(--black);
+          }
+          @include sm {
             width: 100%;
-            object-fit: cover;
           }
-        }
-        .title {
-          margin: 1em 1em 0 1em;
-          h4 {
-            font-size: 1em;
+          .preview-img {
+            height: 200px;
+            @include sm {
+              height: 240px;
+            }
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
           }
-        }
-        .date-time {
-          margin: 0 1em 1em 1em;
-          ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            li {
-              padding: 0 1em;
-              position: relative;
-              font-size: 0.9em;
-              color: var(--light-text);
-              &:after {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 50%;
-                width: 2px;
-                height: 60%;
-                transform: translateY(-50%);
-                background-color: var(--light-text);
-              }
-              &:first-child {
-                padding-left: 0;
-              }
-              &:last-child {
-                padding-right: 0;
+          .title {
+            margin: 1em 1em 0 1em;
+            h4 {
+              font-size: 1em;
+            }
+          }
+          .date-time {
+            margin: 0 1em 1em 1em;
+            ul {
+              display: flex;
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              li {
+                padding: 0 1em;
+                position: relative;
+                font-size: 0.9em;
+                color: var(--light-text);
                 &:after {
-                  content: none;
+                  content: "";
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  width: 2px;
+                  height: 60%;
+                  transform: translateY(-50%);
+                  background-color: var(--light-text);
+                }
+                &:first-child {
+                  padding-left: 0;
+                }
+                &:last-child {
+                  padding-right: 0;
+                  &:after {
+                    content: none;
+                  }
                 }
               }
             }
