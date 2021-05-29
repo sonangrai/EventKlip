@@ -1,0 +1,73 @@
+{% extends 'layout/_layout.twig' %} {% block title %} Scanned - EventKlip {%
+endblock %} {% block javascripts %} {% endblock %} {% block contents %}
+
+<!-- Scanned Card-->
+
+<section class="scanned">
+  <div class="wrapper">
+    <div class="scan-wrapper">
+      <div class="scan-card">
+        <div class="photos">
+          <div class="banner">
+            <img src="./img/prev1.jpg" alt="" />
+          </div>
+          <div class="event-pic">
+            <img src="./img/prev2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="event-info">
+          <div class="title">
+            <h3>Sam & Sammy Wedding</h3>
+          </div>
+          <div class="event-date">
+            <div class="date-row">
+              <div class="day">
+                <span>Sat</span>
+              </div>
+              <div class="date">
+                <span>26</span>
+              </div>
+              <div class="month">
+                <span>Sep</span>
+              </div>
+            </div>
+          </div>
+          <div class="event-location">
+            <span>Address - 1122</span>
+            <span>Street 5 , City</span>
+            <span>Venue Hall</span>
+          </div>
+        </div>
+        <div class="event-meta">
+          <div class="qr">
+            <img src="./img/qr.png" alt="" />
+          </div>
+          <div class="code">
+            <span>BOK-3EA4</span>
+          </div>
+        </div>
+        <div class="download-app">
+          <div class="title">
+            <span>Download our App</span>
+          </div>
+          <div class="download-row">
+            <a
+              href="https://apps.apple.com/us/app/eventklip/id1554633927"
+              target="_blank"
+            >
+              <img src="./img/app-store.png" alt="" />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.app.eventklip"
+              target="_blank"
+            >
+              <img src="./img/play-store.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

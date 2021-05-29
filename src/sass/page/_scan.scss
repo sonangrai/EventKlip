@@ -1,0 +1,138 @@
+.scanned {
+  margin-top: 125px;
+  padding: 2em 0;
+  @include sm {
+    margin-top: 98px;
+  }
+  .scan-wrapper {
+    width: 60%;
+    margin: auto;
+    padding: 8em;
+    background-image: url("../img/scanned.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @include lg {
+      padding: 5em;
+      width: 70%;
+    }
+    @include md {
+      width: 80%;
+    }
+    @include sm {
+      width: 100%;
+      padding: 3em;
+    }
+    .photos {
+      position: relative;
+      .banner {
+        height: 200px;
+        overflow: hidden;
+        @include sm {
+          height: 150px;
+        }
+        img {
+          width: 100%;
+          aspect-ratio: 1.5;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .event-pic {
+        margin-top: -60px;
+        text-align: center;
+        @include sm {
+          margin-top: -40px;
+        }
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          object-fit: cover;
+          @include sm {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+    }
+    .event-info {
+      text-align: center;
+      margin: 1em 0;
+      .title {
+        h3 {
+          font-weight: $font-light;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          font-size: 1.4em;
+        }
+      }
+      .event-date {
+        .date-row {
+          @include flexer(center, center);
+          .date {
+            font-size: 2em;
+            margin: 0 0.5em;
+            font-weight: $font-semibold;
+          }
+          .day,
+          .month {
+            text-transform: uppercase;
+            border-top: 1px solid var(--black);
+            border-bottom: 1px solid var(--black);
+          }
+        }
+      }
+      .event-location {
+        span {
+          display: block;
+        }
+      }
+    }
+    .event-meta {
+      margin-top: 3em;
+      text-align: center;
+      .qr {
+        width: 80px;
+        margin: auto;
+        padding: 2px;
+        border: 1px solid var(--black);
+        img {
+          width: 100%;
+        }
+      }
+      .code {
+        span {
+          font-weight: $font-semibold;
+          font-size: 1.2em;
+        }
+      }
+    }
+    .download-app {
+      margin-top: 2em;
+      .title {
+        text-align: center;
+        border-top: 1px solid var(--black);
+        padding: 1em 0;
+        span {
+          font-size: 1.2em;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+      .download-row {
+        display: flex;
+        justify-content: center;
+        a {
+          display: block;
+          width: 50px;
+          &:first-child {
+            margin-right: 1em;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
