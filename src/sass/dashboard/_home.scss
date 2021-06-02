@@ -48,12 +48,12 @@
             }
           }
           .count {
-            padding: 2em 0;
+            padding: 1em 0;
             position: relative;
             cursor: pointer;
             text-align: center;
             span {
-              font-size: 1.5em;
+              font-size: 1em;
               font-weight: $font-semibold;
               color: var(--primary-color);
               @include lg {
@@ -63,8 +63,8 @@
             &:after {
               position: absolute;
               content: "";
-              width: 5em;
-              height: 5em;
+              width: 3em;
+              height: 3em;
               border-radius: 50%;
               top: 50%;
               left: 50%;
@@ -99,7 +99,7 @@
       scrollbar-width: thin;
       .events-row {
         display: flex;
-        width: calc((400px * 6) - 0.2em);
+        width: calc((297px * 6) + (0.8em * 6));
         gap: 0.2em;
         .card {
           overflow: hidden;
@@ -109,8 +109,8 @@
         }
         .the-event {
           display: inline-block;
-          width: 400px;
-          margin-right: 0.5em;
+          width: 297px;
+          margin-right: 0.8em;
           &:last-child {
             margin-right: 0;
           }

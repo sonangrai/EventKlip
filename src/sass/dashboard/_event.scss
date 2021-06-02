@@ -1,26 +1,66 @@
 .single-content {
+  padding: 0 1em;
+  .hero-image {
+    position: sticky;
+    top: 72px;
+    z-index: 9;
+    height: 240px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .prof {
+      margin-top: -80px;
+      text-align: center;
+      img {
+        display: inline-block;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+      }
+    }
+  }
+
   .event-row {
-    @include flexer(flex-start, flex-start);
+    @include flexer(center, flex-start);
     @include lg {
       flex-wrap: wrap;
     }
-    gap: 1%;
     .event-info {
-      width: 80%;
+      .event-name {
+        margin: 1em;
+        text-align: center;
+        h2 {
+          font-weight: $font-semibold;
+          font-size: 1.3em;
+          color: var(--secondary-color);
+        }
+      }
+      .cons {
+        margin: 1em;
+        display: flex;
+        justify-content: space-between;
+      }
+      .accordion {
+        button {
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+          &:not(.collapsed) {
+            color: var(--secondary-color);
+          }
+        }
+      }
+      padding-top: 100px;
+      width: 70%;
       @include ek-card;
       @include xl {
         width: 68%;
       }
       @include lg {
         width: 100%;
-      }
-      .hero-image {
-        height: 340px;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
       }
 
       .event-meta {
@@ -104,38 +144,55 @@
           margin-top: 2em;
         }
       }
+      .the-gallery {
+        .title {
+          padding: 1em;
+          display: flex;
+          justify-content: space-between;
+          span {
+            font-size: 1em;
+            &:first-child {
+              font-size: 1.2em;
+              font-weight: $font-semibold;
+            }
+            a {
+              color: var(--primary-color);
+              text-decoration: none;
+            }
+          }
+        }
+        .gal-row {
+          display: flex;
+          margin-right: -1em;
+          gap: 1em;
+          @include lg {
+            overflow-x: auto;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+              height: 4px;
+            }
+          }
+          img {
+            display: inline-block;
+            width: calc((100% / 4) - 1em);
+            @include lg {
+              width: 140px;
+            }
+          }
+        }
+      }
       .the-descriptions {
         margin: 2em;
-      }
-    }
-    .event-actions {
-      @include ek-card;
-      width: calc(100% - 80% - 1%);
-      @include xl {
-        width: calc(100% - 68% - 1%);
-      }
-      @include lg {
-        width: 100%;
-        margin-top: 1em;
-      }
-      .title {
-        h4 {
-          font-size: 1.2em;
+        .title {
+          text-align: center;
+          span {
+            font-size: 1.2em;
+            font-weight: $font-semibold;
+          }
+          p {
+            font: 0.8em;
+          }
         }
-        margin: 1em;
-      }
-      .prev {
-        height: 140px;
-        margin-bottom: 1em;
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-        }
-      }
-      a {
-        width: calc(100% - 2em);
-        margin: 0 1em 1em 1em;
       }
     }
   }

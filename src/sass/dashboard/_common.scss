@@ -56,23 +56,22 @@
 
 //Breadcrumb
 .topbar {
-  padding: 0.5em;
-  background-color: var(--primary-color);
+  padding: 1em;
   font-size: 1em;
   ol.breadcrumb {
     margin: 0;
     .breadcrumb-item {
       font-size: 0.9em;
       a {
-        color: var(--white);
+        color: var(--primary-color);
         text-decoration: none;
         font-size: 0.9em;
       }
       &.active {
-        color: var(--light-grey);
+        color: var(--primary-color);
       }
       &:before {
-        color: var(--white);
+        color: var(--primary-color);
       }
     }
   }

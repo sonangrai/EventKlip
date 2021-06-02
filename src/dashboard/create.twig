@@ -51,14 +51,29 @@ contents %}
           <label for="event-type">Event Type</label>
         </div>
 
-        <div class="form-item form-inline">
-          <div class="from">
-            <input class="form-control" type="date" placeholder="From" />
+        <div class="form-inline">
+          <div class="form-item">
+            <div class="from">
+              <input
+                id="start"
+                class="form-control"
+                type="date"
+                placeholder="From"
+              />
+            </div>
+            <label for="start" class="no-trans">Event Date</label>
           </div>
-          <div class="to">
-            <input class="form-control" type="date" placeholder="To" />
+          <div class="form-item">
+            <div class="to">
+              <input
+                id="expiry"
+                class="form-control"
+                type="date"
+                placeholder="To"
+              />
+            </div>
+            <label for="expiry" class="no-trans">Event Expire</label>
           </div>
-          <label for="" class="no-trans">Event Date</label>
         </div>
 
         <div class="form-item">
@@ -117,6 +132,11 @@ contents %}
             <option value="Unlimited">Unlimited</option>
           </select>
           <label for="event-limit">Multimedia Limitsper User</label>
+        </div>
+
+        <div class="form-item checkbox-item">
+          <label for="share">Share with Clients</label>
+          <input type="checkbox" name="" id="" value="Share with Clients" />
         </div>
 
         <div class="next">
